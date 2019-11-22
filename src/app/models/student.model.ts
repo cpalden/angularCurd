@@ -6,5 +6,6 @@ export class Student {
     faculty: string;
     email: string;
     // isActive: boolean;
-    // photoPath?: string;
+    photoPath?: string;
 }
+

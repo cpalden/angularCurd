@@ -1,0 +1,36 @@
+<div class="panel panel-primary" *ngFor="let student of students">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{student.name}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-10">
+            <div class="row vertical-align">
+                <div class="col-xs-4">
+                    <img class="imageClass" [src]="student.photoPath"/>
+                </div>
+                <div class="col-xs-8">
+                    <div class="row">
+                        <div class="col-xs-6">ID</div>
+                        <div class="col-xs-6">: {{student.id}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Year</div>
+                        <div class="col-xs-6">: {{student.year}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Department</div>
+                        <div class="col-xs-6">: {{student.department}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Faculty</div>
+                        <div class="col-xs-6">: {{student.faculty}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Email</div>
+                        <div class="col-xs-6">: {{student.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

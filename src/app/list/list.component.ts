@@ -8,7 +8,8 @@ import { Student } from '../models/student.model';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  students: Student[] = [
+  // temporarily hard coding list of students
+  list: Student[] = [
     {
       id: 1,
       name: 'Chime',

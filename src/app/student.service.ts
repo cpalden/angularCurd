@@ -5,6 +5,7 @@ import { Student } from './models/student.model';
   providedIn: 'root'
 })
 export class StudentService {
+  // temporarily hard coding list of students
   private listStudents: Student[] = [
     {
       id: 1,
@@ -32,4 +33,6 @@ export class StudentService {
     }
   ];
   constructor() { }
+  // get a student's detail
+  // get the list of students
 }

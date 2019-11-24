@@ -1,1 +1,41 @@
-<p>student works!</p>
+<div class="container">
+    <div class="card" *ngFor="let item of list">
+        <div class="card-header bg-info text-white">
+            <div class="row">
+                <div class="col-sm-11">{{item.name}}</div>
+                <div class="col-sm-1">
+                    <a href="#" class="btn text-white">Edit</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">  
+            <div class="row vertical-align">
+                <div class="col-sm-4">
+                    <img class="imageClass" [src]="item.photoPath" alt="Image"/>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">ID</div>
+                        <div class="col-sm-6">: {{item.id}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Year</div>
+                        <div class="col-sm-6">: {{item.year}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Department</div>
+                        <div class="col-sm-6">: {{item.department}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Faculty</div>
+                        <div class="col-sm-6">: {{item.faculty}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Email</div>
+                        <div class="col-sm-6">: {{item.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

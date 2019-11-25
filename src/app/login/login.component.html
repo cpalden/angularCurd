@@ -1,0 +1,28 @@
+<!-- 
+    Wrapping in the form tag enables us to access all angular form features 
+    #loginForm is the template reference variable, 
+    ngForm directive subliments the form element with additional features 
+-->
+<form #loginForm="ngForm" (ngSubmit)="loginMember(loginForm)">
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Login
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input id="userName" type="text" name="UserName" [(ngModel)]="userName"  class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="text" name="Password" [(ngModel)]="password" class="form-control">
+                </div>
+            </div>
+            <div class="card-footer bg-secondary">
+                <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+        </div>      
+    </div>
+</form>
+Angular generated form model: {{loginForm.value | json}}

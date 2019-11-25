@@ -1,31 +1,31 @@
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div class="contianer-jumbotron text-center" style="margin-bottom:0">
   <h1>E Learning Center</h1>
   <p>Resizable responsive page!</p> 
 </div>
   
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Home</a>
+  <a class="navbar-brand" routerLink="home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Members</a>
+        <a class="nav-link" routerLink="list">Members</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" routerLink="home">Contact</a>
       </li>    
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" routerLink="login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Register</a>
+        <a class="nav-link" routerLink="register">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Logout</a>
+        <a class="nav-link" routerLink="#">Logout</a>
       </li>
     </ul>
   </div>  
@@ -33,46 +33,32 @@
   
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>About</h2>
-      <p>Welcome to E Learning Center. It is Affordable, Accessible and Availbale to all.</p>
-      <h3>Highlights</h3>
-      <p>Important links.</p>
+    <div class="col-sm-3">
+      <h3>Featured</h3>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active bg-info" href="#">Active</a>
+          <a class="nav-link" routerLink="articles">Link</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" routerLink="articles">Link</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link disabled" routerLink="#">Disabled</a>
         </li>
       </ul>
       <hr class="d-sm-none">
     </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Nov 1, 2019</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Details of the event.</p>
-      <br>
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Oct 25, 2019</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Details of the event.</p>
+    <div class="col-sm-6">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-sm-3">
     </div>
   </div>
 </div>
   
 <div class="jumbotron text-center" style="margin-bottom:0">
   <div class="social-section text-center">
-    <ul>Follow:
+    <ul>
       <a routerLink="" routerLinkActive="active" class="btn-floating btn-sm btn-fb">
         <i class="facebook icon-circle">f</i>
       </a>
@@ -85,7 +71,6 @@
     </ul>
   </div>
   <div class="footer-copyright text-center">
-    @2020 Copyright: <a routerLink="/home" routerLinkActive="active">E Learning Center</a>
+    @2020 Copyright: <a routerLink="home" routerLinkActive="active">E Learning Center</a>
   </div>
 </div>
-<router-outlet></router-outlet>

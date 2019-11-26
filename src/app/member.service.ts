@@ -1,35 +1,38 @@
 import { Injectable } from '@angular/core';
-import { Student } from './models/student.model';
+import { Member } from './models/member.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
+export class MemberService {
   // temporarily hard coding list of students
-  private listStudents: Student[] = [
+  private listMembers: Member[] = [
     {
       id: 1,
       name: 'Chime',
-      year: 3,
+      gender: 'male',
       department: 'Computer Science',
-      faculty: 'Science',
-      email: 'chime@ryerson.ca'
+      email: 'chime@ryerson.ca',
+      userName: 'chime',
+      password: 'password'
     },
     {
       id: 2,
       name: 'C',
-      year: 4,
+      gender: 'male',
       department: 'Computer Science',
-      faculty: 'Science',
-      email: 'c@ryerson.ca'
+      email: 'c@ryerson.ca',
+      userName: 'c',
+      password: 'password'
     },
     {
       id: 3,
       name: 'P',
-      year: 3,
+      gender: 'male',
       department: 'Computer Science',
-      faculty: 'Science',
-      email: 'p@ryerson.ca'
+      email: 'p@ryerson.ca',
+      userName: 'p',
+      password: 'password'
     }
   ];
   constructor() { }

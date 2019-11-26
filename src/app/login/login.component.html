@@ -3,24 +3,36 @@
     #loginForm is the template reference variable, 
     ngForm directive subliments the form element with additional features 
 -->
-<form #loginForm="ngForm" (ngSubmit)="loginMember(loginForm)">
+<form #loginForm="ngForm" ngNativeValidate (ngSubmit)="loginMember(loginForm)">
     <div class="container">
         <div class="card">
             <div class="card-header bg-info text-white">
                 Login
             </div>
             <div class="card-body">
-                <div class="form-group">
-                    <label for="userName">Username</label>
-                    <input id="userName" type="text" name="UserName" [(ngModel)]="userName"  class="form-control">
+                <!-- class binding to display error msg on condition,
+                    [class.has-error]="userNameControl.invalid" -->
+                <div class="form-group" [class.has-error]="userNameControl.invalid && userNameControl.touched">
+                    <!-- control-label class turns the text into red on validation error -->
+                    <label for="userName" class="control-label">Username</label>
+                    <!-- exporting ngModel directive into a local template ref varaible, 
+                        #userNameControl="ngModel" -->
+                    <input required id="userName" type="text" name="UserName"
+                        [(ngModel)]="userName"  #userNameControl="ngModel" class="form-control">
+                        <span class="help-block" *ngIf="userNameControl.invalid && userNameControl.touched">
+                            Invalid Username
+                        </span>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input id="password" type="text" name="Password" [(ngModel)]="password" class="form-control">
+                    <input required id="password" type="text" name="Password"
+                        [(ngModel)]="password" #passwordControl="ngModel" class="form-control">
                 </div>
             </div>
             <div class="card-footer bg-secondary">
-                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-info" [disabled]="loginForm.invalid">
+                    Submit
+                </button>
             </div>
         </div>      
     </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../models/student.model';
+import { Member } from '../models/member.model';
 
 
 @Component({
@@ -9,33 +9,33 @@ import { Student } from '../models/student.model';
 })
 export class ListComponent implements OnInit {
   // temporarily hard coding list of students
-  list: Student[] = [
+  list: Member[] = [
     {
       id: 1,
       name: 'Chime',
-      year: 3,
-      department: 'Computer Science',
-      faculty: 'Science',
+      gender: 'male',
+      department: 'Staff',
       email: 'chime@ryerson.ca',
-      photoPath: 'assets/images/chime1.jpg'
+      userName: 'chime',
+      password: 'password'
     },
     {
       id: 2,
       name: 'C',
-      year: 4,
+      gender: 'male',
       department: 'Computer Science',
-      faculty: 'Science',
       email: 'c@ryerson.ca',
-      photoPath: 'assets/images/chime2.jpg'
+      userName: 'chime',
+      password: 'password'
     },
     {
       id: 3,
       name: 'P',
-      year: 3,
+      gender: 'male',
       department: 'Computer Science',
-      faculty: 'Science',
       email: 'p@ryerson.ca',
-      photoPath: 'assets/images/chime3.jpg'
+      userName: 'chime',
+      password: 'password'
     }
   ];
   constructor() { }

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
+import { MemberComponent } from './member/member.component';
 import { ListComponent } from './list/list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +15,7 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StudentComponent,
+    MemberComponent,
     ListComponent,
     PageNotFoundComponent,
     HomeComponent,

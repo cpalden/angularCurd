@@ -2,8 +2,8 @@
     <div class="card" *ngFor="let item of list">
         <div class="card-header bg-secondary text-white">
             <div class="row">
-                <div class="col-sm-11">{{item.name}}</div>
-                <div class="col-sm-1">
+                <div>{{item.name}}</div>
+                <div class="ml-auto">
                     <a href="#" class="btn text-white">Edit</a>
                 </div>
             </div>
@@ -19,21 +19,25 @@
                         <div class="col-sm-6">: {{item.id}}</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">Year</div>
-                        <div class="col-sm-6">: {{item.year}}</div>
+                        <div class="col-sm-6">Gender</div>
+                        <div class="col-sm-6">: {{item.gender}}</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Department</div>
                         <div class="col-sm-6">: {{item.department}}</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">Faculty</div>
-                        <div class="col-sm-6">: {{item.faculty}}</div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-6">Email</div>
                         <div class="col-sm-6">: {{item.email}}</div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-6">UserName</div>
+                        <div class="col-sm-6">: {{item.userName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Password</div>
+                        <div class="col-sm-6">: {{item.password}}</div>
+                    </div>    
                 </div>
             </div>
         </div>

@@ -1,1 +1,58 @@
-<p>register works!</p>
+<!-- 
+    Wrapping in the form tag enables us to access all angular form features 
+    #loginForm is the template reference variable, 
+    ngForm directive subliments the form element with additional features 
+-->
+<form #registerForm="ngForm" ngNativeValidate (ngSubmit)="registerMember(member)">
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Register
+            </div>
+            <div class="card-body">
+                <div class="form-group" [class.has-error]="name.invalid && name.touched">
+                    <label for="name" class="control-label">Name</label>
+                    <input required id="name" type="text" name="Name" class="form-control" 
+                        [(ngModel)]="member.name"  #name="ngModel" >
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select required id="gender" name="Gender" 
+                        [(ngModel)]="member.gender" class="form-control">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select required id="department" name="Department" 
+                        [(ngModel)]="member.department" class="form-control">
+                        <option value="1">Student</option>
+                        <option value="2">Staff</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input required id="email" type="text" name="Email" 
+                        [(ngModel)]="member.email"  class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input required id="userName" type="text" name="UserName"
+                        [(ngModel)]="member.userName"  class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input required id="password" type="text" name="Password"
+                        [(ngModel)]="member.password" class="form-control">
+                </div>
+            </div>
+            <div class="card-footer bg-secondary">
+                <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+        </div>      
+    </div>
+</form>
+    Angular generated form model: {{registerForm.value | json}}
+    {{ member | json}}

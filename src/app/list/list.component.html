@@ -24,7 +24,11 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Department</div>
-                        <div class="col-sm-6">: {{item.department}}</div>
+                        <div class="col-sm-6" [ngSwitch]="item.department">:
+                            <span *ngSwitchCase="1">Student</span>
+                            <span *ngSwitchCase="2">Staff</span>
+                            <span *ngSwitchDefault>N/A</span>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Email</div>

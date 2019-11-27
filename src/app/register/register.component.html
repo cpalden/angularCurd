@@ -3,7 +3,7 @@
     #loginForm is the template reference variable, 
     ngForm directive subliments the form element with additional features 
 -->
-<form #registerForm="ngForm" ngNativeValidate (ngSubmit)="registerMember(member)">
+<form #registerForm="ngForm" ngNativeValidate (ngSubmit)="registerMember()">
     <div class="container">
         <div class="card">
             <div class="card-header bg-info text-white">
@@ -28,8 +28,9 @@
                     <label for="department">Department</label>
                     <select required id="department" name="Department" 
                         [(ngModel)]="member.department" class="form-control">
-                        <option value="1">Student</option>
-                        <option value="2">Staff</option>
+                        <option *ngFor="let dept of departments" [value]="dept.id">
+                            {{dept.name}}
+                        </option>
                     </select>
                 </div>
                 <div class="form-group">

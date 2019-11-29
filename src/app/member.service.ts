@@ -47,4 +47,12 @@ export class MemberService {
   registerMember(member: Member) {
     this.listMembers.push(member);
   }
+
+  // removing a member using their "id"
+  removeMember(id: number) {
+    const i = this.listMembers.findIndex(mem => mem.id === id);
+    if ( i !== -1) {
+      this.listMembers.slice(i, 1);
+    }
+  }
 }

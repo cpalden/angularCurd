@@ -1,17 +1,22 @@
 <div class="container">
+    <div class="container-header bg-info">
+        Member List
+    </div>
     <div class="card" *ngFor="let item of list">
         <div class="card-header bg-secondary text-white">
             <div class="row">
                 <div>{{item.name}}</div>
                 <div class="ml-auto">
-                    <a href="#" class="btn text-white">Edit</a>
+                    <a routerLink="#" class="btn text-white" (click)="editMember()">Edit</a>
+                    <a routerLink="#" class="btn text-red" (click)="removeMember()">Remove</a>
                 </div>
             </div>
         </div>
         <div class="card-body">  
             <div class="row vertical-align">
                 <div class="col-sm-4">
-                    <img class="imageClass" [src]="item.photoPath" alt="Image"/>
+                    <img class="imageClass" [src]="item.photoPath" alt="Image"
+                        *ngIf="item.photoPath !== ''"/>
                 </div>
                 <div class="col-sm-8">
                     <div class="row">

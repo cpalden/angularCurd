@@ -2,34 +2,33 @@
     <div class="container-header bg-info">
         Member List
     </div>
-    <div class="card" *ngFor="let item of list">
+    <div class="card" *ngFor="let mem of members">
         <div class="card-header bg-secondary text-white">
             <div class="row">
-                <div>{{item.name}}</div>
-                <div class="ml-auto">
-                    <a routerLink="#" class="btn text-white" (click)="editMember()">Edit</a>
-                    <a routerLink="#" class="btn text-red" (click)="removeMember()">Remove</a>
+                <div>{{mem.name}}</div>
+                <div class="ml-auto btn-toolbar">
+                    <button class="btn btn-info" (click)= "editMember(mem.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="removeMember()">Remove</button>
                 </div>
             </div>
         </div>
         <div class="card-body">  
             <div class="row vertical-align">
                 <div class="col-sm-4">
-                    <img class="imageClass" [src]="item.photoPath" alt="Image"
-                        *ngIf="item.photoPath !== ''"/>
+                    <img class="imageClass" [src]="" alt="Image"/>
                 </div>
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-6">ID</div>
-                        <div class="col-sm-6">: {{item.id}}</div>
+                        <div class="col-sm-6">: {{mem.id}}</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Gender</div>
-                        <div class="col-sm-6">: {{item.gender}}</div>
+                        <div class="col-sm-6">: {{mem.gender}}</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Department</div>
-                        <div class="col-sm-6" [ngSwitch]="item.department">:
+                        <div class="col-sm-6" [ngSwitch]="mem.department">:
                             <span *ngSwitchCase="1">Student</span>
                             <span *ngSwitchCase="2">Staff</span>
                             <span *ngSwitchDefault>N/A</span>
@@ -37,18 +36,19 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Email</div>
-                        <div class="col-sm-6">: {{item.email}}</div>
+                        <div class="col-sm-6">: {{mem.email}}</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">UserName</div>
-                        <div class="col-sm-6">: {{item.userName}}</div>
+                        <div class="col-sm-6">: {{mem.userName}}</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">Password</div>
-                        <div class="col-sm-6">: {{item.password}}</div>
+                        <div class="col-sm-6">: {{mem.password}}</div>
                     </div>    
                 </div>
             </div>
         </div>
     </div>
+    <!--<div *ngIf="error">{{errorFound}}</div>-->
 </div>

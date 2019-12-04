@@ -2,18 +2,18 @@
   "members": [
     {
       "id": 1,
-      "name": "Chime",
-      "gender": "male",
-      "department": "Staff",
-      "email": "chime@ryerson.ca",
-      "userName": "chime",
-      "password": "password"
+      "name": "Chime2",
+      "gender": "Other",
+      "department": "1",
+      "email": "c2@ryerson.ca",
+      "userName": "c1",
+      "password": "pwd2"
     },
     {
       "id": 2,
-      "name": "C",
-      "gender": "male",
-      "department": "Staff",
+      "name": "Palden",
+      "gender": "Male",
+      "department": 2,
       "email": "c@ryerson.ca",
       "userName": "c",
       "password": "password"
@@ -21,11 +21,38 @@
     {
       "id": 3,
       "name": "P",
-      "gender": "male",
-      "department": "Staff",
+      "gender": "Male",
+      "department": 1,
       "email": "p@ryerson.ca",
       "userName": "p",
       "password": "password"
+    },
+    {
+      "id": 4,
+      "name": "cp",
+      "gender": "Female",
+      "department": "2",
+      "email": "cp@ryerson.ca",
+      "userName": "cpryerson",
+      "password": "1234"
+    },
+    {
+      "id": 5,
+      "name": "cpalden",
+      "gender": "Male",
+      "department": "2",
+      "email": "palden@gmail.com",
+      "userName": "cpal",
+      "password": "cpal"
+    },
+    {
+      "id": 6,
+      "name": "p1",
+      "gender": "Male",
+      "department": "1",
+      "email": "p1@gmail.com",
+      "userName": "p1",
+      "password": "pwd1"
     }
   ],
   "profile": {

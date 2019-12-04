@@ -10,7 +10,7 @@ import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
+  {path: 'edit/:id', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'list', component: ListComponent},
   {path: 'articles', component: ArticlesComponent},

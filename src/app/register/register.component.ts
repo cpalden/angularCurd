@@ -62,11 +62,6 @@ export class RegisterComponent implements OnInit {
         }
   }
 
-  /*editMember(member: Member) {
-    this.registerForm.patchValue({
-
-    });
-  }*/
   registerMember(): void {
     if ( this.member.id === null ) {
       this.memberservice.registerMember(this.member).subscribe(
@@ -75,15 +70,15 @@ export class RegisterComponent implements OnInit {
             // this.registerForm.reset();
             this.router.navigate(['list']);
           },
-          (err: any) => console.log(err)
+          (err: any) => { console.log(err); }
         );
       } else {
         this.memberservice.updateMember(this.member).subscribe(
           ( ) => {
-              // this.registerForm.reset();
-              this.router.navigate(['list']);
-            },
-            (err: any) => console.log(err)
+                  // this.registerForm.reset();
+                  this.router.navigate(['list']);
+                },
+            (err: any) => { console.log(err); }
         );
       }
   }

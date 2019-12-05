@@ -1,15 +1,6 @@
 {
   "members": [
     {
-      "id": 1,
-      "name": "Chime2",
-      "gender": "Other",
-      "department": "1",
-      "email": "c2@ryerson.ca",
-      "userName": "c1",
-      "password": "pwd2"
-    },
-    {
       "id": 2,
       "name": "Palden",
       "gender": "Male",

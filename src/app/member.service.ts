@@ -39,6 +39,7 @@ export class MemberService {
     .pipe(catchError(this.handleError));
   }
 
+  // register new member
   registerMember(member: Member): Observable<Member> {
     return this.httpClient.post<Member>(this.baseUrl, member, {
         headers: new HttpHeaders({
@@ -47,6 +48,7 @@ export class MemberService {
       }).pipe(catchError(this.handleError));
   }
 
+  // updates existing member details
   updateMember(member: Member): Observable<void> {
     return this.httpClient.put<void>(`${this.baseUrl}/${member.id}`, member, {
       headers: new HttpHeaders({
